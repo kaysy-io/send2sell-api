@@ -15,27 +15,27 @@ These are the parameters supported by the endpoint. Most of them are required fi
 | Parameter                               | Data type                           | Description                                                                           |
 | :-------------------------------------- | :---------------------------------- | :------------------------------------------------------------------------------------ |
 | [custom](#custom)                       | Integer                             | **Required.** Accepts only 0 or 1 as values.                                          |
-| [custom_flyer](#custom-flyer)           | String                              | **Required if custom is set to 1.** The relative url of an uploaded image.            |
+| [custom_flyer](#custom_flyer)           | String                              | **Required if custom is set to 1.** The relative url of an uploaded image.            |
 | [template](#template)                   | String                              | **Required if custom is set to 0.** The HTML template name to be used as flyer.       |
-| [prop_address](#prop-address)           | String                              | **Required.** Listing address.                                                        |
-| [prop_desc](#prop-desc)                 | String                              | **Required.** Listing description.                                                    |
-| [prop_details](#prop-details)           | String                              | **Required.** Listing features summary. For example, `2 Beds \| 3 Baths \| 2500 Sqft` |
-| [prop_price](#prop-price)               | String                              | **Required.** Listing price.                                                          |
-| [main_image](#main-image)               | String                              | **Required.** The relative url of one image of the property.                          |
+| [prop_address](#prop_address)           | String                              | **Required.** Listing address.                                                        |
+| [prop_desc](#prop_desc)                 | String                              | **Required.** Listing description.                                                    |
+| [prop_details](#prop_details)           | String                              | **Required.** Listing features summary. For example, `2 Beds \| 3 Baths \| 2500 Sqft` |
+| [prop_price](#prop_price)               | String                              | **Required.** Listing price.                                                          |
+| [main_image](#main_image)               | String                              | **Required.** The relative url of one image of the property.                          |
 | [name](#name)                           | String                              | **Required.** Contact name of the listing agent.                                      |
 | [email](#email)                         | String                              | **Required.** Contact email address of the listing agent.                             |
 | [phone](#phone)                         | String                              | **Required.** Contact phone number of the listing agent.                              |
 | [company](#company)                     | String                              | **Required.** Company name of the listing agent.                                      |
-| [address_1](#address-1)                 | String                              | **Required.** Street address of the listing agent's company.                          |
-| [campaigns](#campaigns)                 | [Array](#campaign-object)           | **Required.** Details of all the email campaigns of this flyer.                       |
+| [address_1](#address_1)                 | String                              | **Required.** Street address of the listing agent's company.                          |
+| [campaigns](#campaigns)                 | [Array](#campaign_object)           | **Required.** Details of all the email campaigns of this flyer.                       |
 | [headline](#headline)                   | String                              | **Optional.** A short header text for the flyers that support it.                     |
-| [sub_headline](#sub-headline)           | String                              | **Optional.** A short sub-headline text for the flyers that support it.               |
-| [accent_color](#accent-color)           | String                              | **Optional.** RGB hex color code (including the # sign) for flyer accent color.       |
-| [theme_color](#theme-color)             | String                              | **Optional.** RGB hex color code (including the # sign) for flyer theme color.        |
-| [theme_font_color](#theme-font-color)   | String                              | **Optional.** RGB hex color code (including the # sign) for flyer font color.         |
-| [additional_images](#additional-images) | [Object](#additional-images-object) | **Optional.** Additional images to be used in the flyer.                              |
+| [sub_headline](#sub_headline)           | String                              | **Optional.** A short sub-headline text for the flyers that support it.               |
+| [accent_color](#accent_color)           | String                              | **Optional.** RGB hex color code (including the # sign) for flyer accent color.       |
+| [theme_color](#theme_color)             | String                              | **Optional.** RGB hex color code (including the # sign) for flyer theme color.        |
+| [theme_font_color](#theme_font_color)   | String                              | **Optional.** RGB hex color code (including the # sign) for flyer font color.         |
+| [additional_images](#additional_images) | [Object](#additional_images_object) | **Optional.** Additional images to be used in the flyer.                              |
 | [website](#website)                     | String                              | **Optional.** The website link that contains more details of the property listing.    |
-| [address_2](#address-2)                 | String                              | **Optional.** Additional address line for the agent contact area.                     |
+| [address_2](#address_2)                 | String                              | **Optional.** Additional address line for the agent contact area.                     |
 | [headshot](#headshot)                   | String                              | **Optional.** Relative url of the listing agent profile image.                        |
 | [license](#license)                     | String                              | **Optional.** License reg. number of the listing agent.                               |
 | [logo](#logo)                           | String                              | **Optional.** Relative url of the agent's company logo image.                         |
@@ -44,7 +44,7 @@ These are the parameters supported by the endpoint. Most of them are required fi
 
 A successfull flyer creation will return an array of campaign data.
 
-### Success response
+#### Success response
 
 |                 |       |
 | :-------------- | :---- |
@@ -79,7 +79,7 @@ A sample response data is shown below.
 ]
 ```
 
-### Error response
+#### Error response
 
 |                      |                |
 | :------------------- | :------------- |
@@ -118,7 +118,7 @@ This is the URL to your custom flyer artwork. The artwork should be uploaded to 
 
 Even though we support custom artwork as a flyer, using one of our HTML template is the recommended approach for better inbox delivery. Right now, we have two email templates `template_1` and `template_2`. Use one of these as the value for `template` parameter.
 
-#### _headline_ {#headline}
+#### _headline_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -128,7 +128,7 @@ Text in this field will be rendered on the headline section of the email templat
 
 A general headline example would look like this - `Open house this Sunday | Free lunch and Wine.`
 
-#### _sub_headline_ {#sub-headline}
+#### _sub_headline_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -138,7 +138,7 @@ This is similar to the headline field except that this will be slightly smaller 
 
 A general sub-headline example would look like this - `5000 BTSA if closed before Christmas | 4% Commission`
 
-#### _accent_color_ {#accent-color}
+#### _accent_color_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -148,7 +148,7 @@ Accent color is a template specific color field that accepts HEX color code as a
 
 Accent color is usually used to highlight the property address and property features.
 
-#### _theme_color_ {#theme-color}
+#### _theme_color_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -158,7 +158,7 @@ Theme color is a template specific color field that accepts HEX color code as a 
 
 Theme color dictates the overall feel of our email templates. Agents usually use it to match it with their company logo.
 
-#### _theme_font_color_ {#theme-font-color}
+#### _theme_font_color_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -168,7 +168,7 @@ Theme font color is a template specific color field that accepts HEX color code 
 
 This is the color of the text that goes along with theme color. Font color should have high visibility on the theme color so that they are visible and easy to the eyes. For a light theme color, choose a dark font color and for a dark theme color, choose a light font color.
 
-#### _prop_address_ {#prop-address}
+#### _prop_address_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -178,7 +178,7 @@ The address of the property that has to be marketed.
 
 Details like property address, price, description, and an image are required fields on the platform. This allows Send2Sell to create a landing page for each flyer. Users clicking on the e-flyers are taken to this landing page only.
 
-#### _prop_desc_ {#prop-desc}
+#### _prop_desc_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -186,7 +186,7 @@ Details like property address, price, description, and an image are required fie
 
 Description of the property.
 
-#### _prop_details_ {#prop-details}
+#### _prop_details_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -196,7 +196,7 @@ A short feature list of the property. For example, `2 Beds | 3 Baths | 2500 Sqft
 
 > A longer text value might look bad on some of the email templates. So keeping the value of this field under 60 characters would be ideal.
 
-#### _prop_price_ {#prop-price}
+#### _prop_price_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -204,7 +204,7 @@ A short feature list of the property. For example, `2 Beds | 3 Baths | 2500 Sqft
 
 The selling/renting price of the property.
 
-#### _main_image_ {#main-image}
+#### _main_image_
 
 | Required | Data type |                Supported values                 |
 | :------: | :-------: | :---------------------------------------------: |
@@ -214,17 +214,17 @@ All flyers should have at least one image of the property.
 
 The value of this field should be a relative URL to an uploaded image file. The artwork should be uploaded to Send2Sell using [file uploader]() API.
 
-#### _additional_images_ {#additional-images}
+#### _additional_images_
 
 | Required |              Data type              |
 | :------: | :---------------------------------: |
-|    No    | [Object](#additional-images-object) |
+|    No    | [Object](#additional_images_object) |
 
 Send2Sell supports adding six additional images to each flyer. All these six images will be shown in the dedicated flyer landing page, but is not necessary that each image will have a place in the flyer. Some flyers support only four images and some support six. The template that support six image will show all the uploaded six image, if any exists and the template that support four images will show the first four uploaded images.
 
 If no additional images are uploaded, our platform will either leave the space on the template blank or it will completely avoid the section. This will depend on the template you select.
 
-##### Additional images object {#additional-images-object}
+##### Additional images object
 
 The object should contain only the fields given below and the flyer will load only the images on these fields.
 
@@ -254,7 +254,7 @@ You can send fields randomly as given below
 
 The above data will fill the slot number one, three, five, and leave all other slots as empty.
 
-#### _name_ {#name}
+#### _name_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -264,7 +264,7 @@ The name of the property listing agent.
 
 All flyer templates of Send2Sell comes with a contact section. This is where property listing agent details like name, email, and contact number is specified. This is also used in the flyer landing page on our platform.
 
-#### _email_ {#email}
+#### _email_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -272,7 +272,7 @@ All flyer templates of Send2Sell comes with a contact section. This is where pro
 
 The email address of the property listing agent.
 
-#### _phone_ {#phone}
+#### _phone_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -280,7 +280,7 @@ The email address of the property listing agent.
 
 The contact number of the property listing agent.
 
-#### _headshot_ {#headshot}
+#### _headshot_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -288,7 +288,7 @@ The contact number of the property listing agent.
 
 The relative URL to an uploaded image file of agent headshot. Flyer landing page and some of the email templates have provision for showing the agent headshot, this image goes in there, if supported.
 
-#### _license_ {#license}
+#### _license_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -296,7 +296,7 @@ The relative URL to an uploaded image file of agent headshot. Flyer landing page
 
 This field allows brokers/agents to enter their license number. Some states and/or realtor associations require this by law.
 
-#### _company_ {#company}
+#### _company_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -306,7 +306,7 @@ The company name of the property listing agent.
 
 Just like agent contact details, agent broker details are also part of each and every flyer send from our platform. This includes broker name, address, and logo.
 
-#### _address_1_ {#address-1}
+#### _address_1_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -314,7 +314,7 @@ Just like agent contact details, agent broker details are also part of each and 
 
 The street address of the broker/agent where mails can be delivered.
 
-#### _address_2_ {#address-2}
+#### _address_2_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -322,13 +322,13 @@ The street address of the broker/agent where mails can be delivered.
 
 An additional address line for specifying the city, state, and zip code of the listing agent/broker. Something like `Dallas, TX 75001`
 
-#### _campaigns_ {#campaigns}
+#### _campaigns_
 
 | Required | Data type | Supported values                              |
 | :------: | :-------: | :-------------------------------------------- |
-|   Yes    |   Array   | Array of [Campaign objects](#campaign-object) |
+|   Yes    |   Array   | Array of [Campaign objects](#campaign_object) |
 
-Campiagns field is an essential field for adding the flyer to a cart or for ordering it and hence each flyer should contain at least one [campaign object](#campaign-object). Campaigns tell Send2Sell the email delivery details like subject line, the mail list to which the flyer has to be delivered, delivery time etc. The field accepts an array of campaign objects, so that same flyer can be send to multiple lists or at multiple times.
+Campiagns field is an essential field for adding the flyer to a cart or for ordering it and hence each flyer should contain at least one [campaign object](#campaign_object). Campaigns tell Send2Sell the email delivery details like subject line, the mail list to which the flyer has to be delivered, delivery time etc. The field accepts an array of campaign objects, so that same flyer can be send to multiple lists or at multiple times.
 
 A campaigns array will look like
 
@@ -362,7 +362,7 @@ A campaigns array will look like
 
 The above data contains the details for three campaigns to two seperate lists. Two of them are to same list but scheduled for two different delivery times. All these campaigns will be delivered on the choosen delivery time on successfull payment of the order.
 
-##### Campaign object {#campaign-object}
+##### Campaign object
 
 The fields supported in a single campaign object is given below.
 
@@ -373,7 +373,7 @@ The fields supported in a single campaign object is given below.
 | [rush](#rush)                 | Integer   | **Required.** Send2Sell has a standard order and rush order. Supported values are 0 and 1. |
 | [scheduled](#scheduled)       | String    | **Required.** The time in CST at which the campaign has to be delivered.                   |
 
-#### _subject_ {#subject}
+#### _subject_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -381,7 +381,7 @@ The fields supported in a single campaign object is given below.
 
 This is the email subject for the flyer campaign. An example would be `6405 Forest Ln, Dallas TX | Open house this Sunday`. Keep it short and simple and avoid using `!` and `$` characters. These characters will be automatically stripped by our email servers before delivery.
 
-#### _mail_list_id_ {#mail_list_id}
+#### _mail_list_id_
 
 | Required | Data type |
 | :------: | :-------: |
@@ -389,7 +389,7 @@ This is the email subject for the flyer campaign. An example would be `6405 Fore
 
 This field determines the mail list to which a campaign has to be send. The value should be a valid id of one of our mail list. You can retreive all the mail list details using our [Mail List API]().
 
-#### _rush_ {#rush}
+#### _rush_
 
 | Required | Data type | Supported values |
 | :------: | :-------: | :--------------: |
@@ -401,7 +401,7 @@ Sending a consistent number of emails throughout a day is really important for b
 
 Set the value of this field to `1` for opting it as a rush campaign and `0` for standard campaign.
 
-#### _scheduled_ {#scheduled}
+#### _scheduled_
 
 | Required | Data type |
 | :------: | :-------: |
