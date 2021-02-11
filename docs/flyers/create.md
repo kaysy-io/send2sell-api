@@ -27,13 +27,13 @@ These are the parameters supported by the endpoint. Most of them are required fi
 | [phone](#phone)                         | String                              | **Required.** Contact phone number of the listing agent.                              |
 | [company](#company)                     | String                              | **Required.** Company name of the listing agent.                                      |
 | [address_1](#address_1)                 | String                              | **Required.** Street address of the listing agent's company.                          |
-| [campaigns](#campaigns)                 | [Array](#campaign_object)           | **Required.** Details of all the email campaigns of this flyer.                       |
+| [campaigns](#campaigns)                 | [Array](#campaign-object)           | **Required.** Details of all the email campaigns of this flyer.                       |
 | [headline](#headline)                   | String                              | **Optional.** A short header text for the flyers that support it.                     |
 | [sub_headline](#sub_headline)           | String                              | **Optional.** A short sub-headline text for the flyers that support it.               |
 | [accent_color](#accent_color)           | String                              | **Optional.** RGB hex color code (including the # sign) for flyer accent color.       |
 | [theme_color](#theme_color)             | String                              | **Optional.** RGB hex color code (including the # sign) for flyer theme color.        |
 | [theme_font_color](#theme_font_color)   | String                              | **Optional.** RGB hex color code (including the # sign) for flyer font color.         |
-| [additional_images](#additional_images) | [Object](#additional_images_object) | **Optional.** Additional images to be used in the flyer.                              |
+| [additional_images](#additional_images) | [Object](#additional-images-object) | **Optional.** Additional images to be used in the flyer.                              |
 | [website](#website)                     | String                              | **Optional.** The website link that contains more details of the property listing.    |
 | [address_2](#address_2)                 | String                              | **Optional.** Additional address line for the agent contact area.                     |
 | [headshot](#headshot)                   | String                              | **Optional.** Relative url of the listing agent profile image.                        |
@@ -218,7 +218,7 @@ The value of this field should be a relative URL to an uploaded image file. The 
 
 | Required |              Data type              |
 | :------: | :---------------------------------: |
-|    No    | [Object](#additional_images_object) |
+|    No    | [Object](#additional-images-object) |
 
 Send2Sell supports adding six additional images to each flyer. All these six images will be shown in the dedicated flyer landing page, but is not necessary that each image will have a place in the flyer. Some flyers support only four images and some support six. The template that support six image will show all the uploaded six image, if any exists and the template that support four images will show the first four uploaded images.
 
@@ -326,9 +326,9 @@ An additional address line for specifying the city, state, and zip code of the l
 
 | Required | Data type | Supported values                              |
 | :------: | :-------: | :-------------------------------------------- |
-|   Yes    |   Array   | Array of [Campaign objects](#campaign_object) |
+|   Yes    |   Array   | Array of [Campaign objects](#campaign-object) |
 
-Campiagns field is an essential field for adding the flyer to a cart or for ordering it and hence each flyer should contain at least one [campaign object](#campaign_object). Campaigns tell Send2Sell the email delivery details like subject line, the mail list to which the flyer has to be delivered, delivery time etc. The field accepts an array of campaign objects, so that same flyer can be send to multiple lists or at multiple times.
+Campiagns field is an essential field for adding the flyer to a cart or for ordering it and hence each flyer should contain at least one [campaign object](#campaign-object). Campaigns tell Send2Sell the email delivery details like subject line, the mail list to which the flyer has to be delivered, delivery time etc. The field accepts an array of campaign objects, so that same flyer can be send to multiple lists or at multiple times.
 
 A campaigns array will look like
 
