@@ -92,7 +92,7 @@ For creating a flyer, the requesting user has to be authenticated. Please refer 
 
 ## Request parameter details
 
-#### _custom_ {#custom}
+#### _custom_
 
 | Required | Data type | Supported values |
 | :------: | :-------: | :--------------: |
@@ -102,7 +102,7 @@ Send2Sell supports sending custom flyer artwork using our platform. The artwork 
 
 If you don't have a custom artwork, you can use one of our email templates. To use our own email templates, set the value of the `custom` to `0`.
 
-#### _custom_flyer_ {#custom-flyer}
+#### _custom_flyer_
 
 |      Required      | Data type |                Supported values                 |
 | :----------------: | :-------: | :---------------------------------------------: |
@@ -110,7 +110,7 @@ If you don't have a custom artwork, you can use one of our email templates. To u
 
 This is the URL to your custom flyer artwork. The artwork should be uploaded to Send2Sell using [file uploader]() API. The URL should be a relative URL to the Send2Sell platform for better inbox delivery of the flyers. So external image links are not supported. [Refer the file uploader API for more details.]()
 
-#### _template_ {#template}
+#### _template_
 
 |      Required      | Data type |       Supported values       |
 | :----------------: | :-------: | :--------------------------: |
