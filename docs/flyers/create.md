@@ -324,9 +324,9 @@ An additional address line for specifying the city, state, and zip code of the l
 
 #### _campaigns_
 
-| Required | Data type | Supported values                              |
-| :------: | :-------: | :-------------------------------------------- |
-|   Yes    |   Array   | Array of [Campaign objects](#campaign-object) |
+| Required | Data type |
+| :------: | :-------: |
+|   Yes    |   Array   |
 
 Campiagns field is an essential field for adding the flyer to a cart or for ordering it and hence each flyer should contain at least one [campaign object](#campaign-object). Campaigns tell Send2Sell the email delivery details like subject line, the mail list to which the flyer has to be delivered, delivery time etc. The field accepts an array of campaign objects, so that same flyer can be send to multiple lists or at multiple times.
 
