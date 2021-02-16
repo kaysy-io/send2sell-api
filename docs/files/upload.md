@@ -85,7 +85,7 @@ If the upload and resize was successfull, the API will return an array containin
 If the uploaded file was within the size limits, the above request would have returned a response similar to
 
 ```json
-["main_image": "/uploads/156790393-open-house-main-image.png"]
+[ main_image: "/uploads/156790393-open-house-main-image.png" ]
 ```
 
 `main_image` is the value of the `upload_name` used in the request.
@@ -96,8 +96,8 @@ HTTP errors with status code `422` will be returned if the uploaded file is not 
 
 ```json
 [
-    "errors": [
-        "main_Image" => ["Main image cannot be more than 8MB in size."]
+    errors: [
+        main_image: ["Main image cannot be more than 8MB in size."]
     ]
 ]
 ```
