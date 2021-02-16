@@ -38,13 +38,13 @@ The logo image of the agents company that goes into the flyer. This image will b
 
 These are the flyer fields that needs resizing and hence when uploading an image goes into either of these fields, it should use the `upload_name` as the flyer form field name.
 
-### 2. Maximum allowed flie size is 8192 KiloBytes
+### 2. Maximum allowed file size is 8192 KiloBytes
 
 Send2Sell server limits upload size to 8MB. Everything above it will throw an HTTP `422` error code.
 
 ### 3. Only limited file types are allowed
 
-Send2Sell server supports only images of JPEG/JPG/PNG format. If it is a `custom_flyer` upload, then the PDF is also supported. Any other upload will result in HTTP `422` error response.
+Send2Sell server supports only images of JPEG/JPG/PNG format. If it is a `custom_flyer` upload, then a PDF file is also supported. Any other upload will result in HTTP `422` error response.
 
 ## A file upload example in PHP
 
@@ -85,7 +85,7 @@ If the upload and resize was successfull, the API will return an array containin
 If the uploaded file was within the size limits, the above request would have returned a response similar to
 
 ```json
-["main_image" => "/uploads/156790393-open-house-main-image.png"]
+["main_image": "/uploads/156790393-open-house-main-image.png"]
 ```
 
 `main_image` is the value of the `upload_name` used in the request.
@@ -96,7 +96,7 @@ HTTP errors with status code `422` will be returned if the uploaded file is not 
 
 ```json
 [
-    "errors" => [
+    "errors": [
         "main_Image" => ["Main image cannot be more than 8MB in size."]
     ]
 ]
