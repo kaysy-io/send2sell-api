@@ -88,7 +88,7 @@ A sample response data is shown below.
 
 A `401 Unauthenticated` error response will be send by the server if the user is not authenticated.
 
-For creating a flyer, the requesting user has to be authenticated. Please refer the [authentication API]() docs for more details.
+For creating a flyer, the requesting user has to be authenticated. Please refer the [authentication API](https://github.com/kaysy-io/send2sell-api/blob/main/docs/authentication/usingAccessToken.md) docs for more details.
 
 ## Request parameter details
 
@@ -108,7 +108,7 @@ If you don't have a custom artwork, you can use one of our email templates. To u
 | :----------------: | :-------: | :---------------------------------------------: |
 | If `custom` is `1` |  String   | Relative URL to the uploaded image on Send2Sell |
 
-This is the URL to your custom flyer artwork. The artwork should be uploaded to Send2Sell using [file uploader]() API. The URL should be a relative URL to the Send2Sell platform for better inbox delivery of the flyers. So external image links are not supported. [Refer the file uploader API for more details.]()
+This is the URL to your custom flyer artwork. The artwork should be uploaded to Send2Sell using [file uploader](https://github.com/kaysy-io/send2sell-api/blob/main/docs/files/upload.md) API. The URL should be a relative URL to the Send2Sell platform for better inbox delivery of the flyers. So external image links are not supported. [Refer the file uploader API for more details.](https://github.com/kaysy-io/send2sell-api/blob/main/docs/files/upload.md)
 
 #### _template_
 
@@ -212,7 +212,7 @@ The selling/renting price of the property.
 
 All flyers should have at least one image of the property.
 
-The value of this field should be a relative URL to an uploaded image file. The artwork should be uploaded to Send2Sell using [file uploader]() API.
+The value of this field should be a relative URL to an uploaded image file. The artwork should be uploaded to Send2Sell using [file uploader](https://github.com/kaysy-io/send2sell-api/blob/main/docs/files/upload.md) API.
 
 #### _additional_images_
 
@@ -387,7 +387,7 @@ This is the email subject for the flyer campaign. An example would be `6405 Fore
 | :------: | :-------: |
 |   Yes    |  Integer  |
 
-This field determines the mail list to which a campaign has to be send. The value should be a valid id of one of our mail list. You can retreive all the mail list details using our [Mail List API]().
+This field determines the mail list to which a campaign has to be send. The value should be a valid id of one of our mail list. You can retreive all the mail list details using our [Mail List API](https://github.com/kaysy-io/send2sell-api/blob/main/docs/mailList/retreive.md).
 
 #### _rush_
 

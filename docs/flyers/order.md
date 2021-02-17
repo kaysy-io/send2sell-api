@@ -5,7 +5,7 @@ A user can order a flyer using the Send2Sell API only if they have enough prepai
 Ordering a flyer is a two step process.
 
 1. Create an order for the flyer, which is explained in this guide.
-2. Make payment of the order using the `id` obtained in the above step. Refer the [order payment]() doc for the implementation details.
+2. Make payment of the order using the `id` obtained in the above step. Refer the [order payment](https://github.com/kaysy-io/send2sell-api/blob/main/docs/authentication/newAccessToken.md) doc for the implementation details.
 
 Once the payment is successfull, the flyer will be automatically scheduled for delivery. The same can be verified from the payment success response or by fetching the flyer details again.
 

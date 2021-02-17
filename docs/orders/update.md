@@ -127,7 +127,7 @@ If the requesting user has no permission to update the order, an HTTP `403` erro
 | :--------- | :------- |
 | **String** | **Yes**  |
 
-First name of the order billing details.
+First name of the billing user.
 
 #### _last_name_
 
@@ -135,7 +135,7 @@ First name of the order billing details.
 | :--------- | :------- |
 | **String** | **No**   |
 
-Last name of the order billing details.
+Last name of the billing user.
 
 #### _street_
 
@@ -143,7 +143,7 @@ Last name of the order billing details.
 | :--------- | :------- |
 | **String** | **No**   |
 
-Street address of the order billing details.
+Street name of the order billing address.
 
 #### _city_
 
@@ -151,7 +151,7 @@ Street address of the order billing details.
 | :--------- | :------- |
 | **String** | **Yes**  |
 
-City name of the order billing details.
+City name of the order billing address.
 
 #### _state_
 
@@ -159,7 +159,7 @@ City name of the order billing details.
 | :--------- | :------- |
 | **String** | **Yes**  |
 
-Two letter state code of the order billing details.
+Two letter state code of the order billing address. [Refer the states API for retreiving two letter codes.](https://github.com/kaysy-io/send2sell-api/blob/main/docs/states/retreive.md)
 
 #### _zip_
 
@@ -167,7 +167,7 @@ Two letter state code of the order billing details.
 | :--------- | :------- |
 | **String** | **Yes**  |
 
-Zip code of the order billing details.
+Zip code of the order billing address.
 
 #### _phone_
 

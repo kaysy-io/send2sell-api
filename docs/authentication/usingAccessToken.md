@@ -4,7 +4,7 @@ Access token is how Send2Sell API determines the authenticity of a request. This
 
 ### Retreive an access token from the API.
 
-To retreive a new access token, please refer the **[Retreive new access token]()** guide.
+To retreive a new access token, please refer the **[Retreive new access token](https://github.com/kaysy-io/send2sell-api/blob/main/docs/authentication/newAccessToken.md)** guide.
 
 A sample access token response object will look like the one given below.
 
