@@ -4,13 +4,15 @@ A flyer can be deleted by an authenticated user if the flyer belongs to the user
 
 |                |                                     |
 | -------------- | ----------------------------------- |
-| Method         | **POST**                            |
+| Method         | **DELETE**                          |
 | Endpoint       | https://www.send2sell.com/api/flyer |
 | Authentication | **Required**                        |
 
 ## Sample delete request
 
-All flyer delete request should contain an `id` field specifying the **id** of the flyer that has to be deleted and a `_method` field with the value **DELETE**.
+All flyer delete request should contain an `id` field specifying the **id** of the flyer that has to be deleted.
+
+> If your client does not support sending an HTTP `DELETE` request, a `_method` field with the value **DELETE** should be sent along with the other data in a `POST` request.
 
 A sample code in PHP will look like the one given below.
 
